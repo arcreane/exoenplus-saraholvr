@@ -11,20 +11,17 @@ public class Main {
         int random;
         int min = 1;
         int max = 100;
+        int nbAleatoire = (int) (Math.random() * (max - min));
         System.out.println("Choisir un nombre entre 1 et 100:");
         Scanner lectureClavier = new Scanner(System.in);
-        saisiNb = lectureClavier.nextInt();
-
         for (i = 0; i < 10; i++) {
-            if (saisiNb == Math.random() * (max - min)) {
+            saisiNb = lectureClavier.nextInt();
+            if (saisiNb == nbAleatoire) {
                 System.out.println("le nombre mystere est: " + saisiNb);
             } else {
                 System.out.println("ce n'est pas le bon");
             }
-        }
-        while ( saisiNb != random);
-        {
-            
+            System.out.println("Nombre aléatoire " + nbAleatoire);
         }
     }
 }
